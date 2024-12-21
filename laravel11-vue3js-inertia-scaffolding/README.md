@@ -166,3 +166,11 @@ import { Link } from '@inertiajs/vue3';
     </nav>
 </template>
 ```
+
+### run 
+
+```
+npm run dev
+&
+php artisan serve
+```
