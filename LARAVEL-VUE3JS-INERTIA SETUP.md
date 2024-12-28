@@ -1,4 +1,5 @@
 # installation
+## LARAVEL-VUE3JS-INERTIA SETUP
 > Laravel 11 + Vue 3 with Inertia JS - Install and setup the pages, layouts, Component, use Props
 
 > https://www.youtube.com/watch?v=Zi-LRmnUhdo
