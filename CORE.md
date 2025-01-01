@@ -23,6 +23,8 @@ php artisan breeze:install vue
 
 ## Creating Pages
 
+<img src="./assets/Creating-Pages.png">
+
 ## Different Routing
 
 ## Form helper (post, put, delete) directed to route
