@@ -14,37 +14,15 @@ php artisan breeze:install vue
 
 <hr>
 
-## qljkw;dbqjdkbqdjkdw
+### Contents
 
-- [Creating Pages](##creating-pages)
-
-### qw
-### eqw
-### eqw
-### eq
-### we
-### qwe
-### qwe
-### qw
-### eq
-### we
-### qwe
-### qwe
-### qwe
-### qwe
-### qwe
-### qw
-### eqw
-### eq
-### we
-### qwe
-### qwe
-### qwe
-### qwe
-### qwe
-### qw
-### eqw
-### eqw
-### e
+- [Creating Pages](#creating-pages)
+- [Different Routing](#different-routing)
+- [Form helper (post, put, delete) directed to route](#form-helper-post-put-delete-directed-to-route)
+- etc
 
 ## Creating Pages
+
+## Different Routing
+
+## Form helper (post, put, delete) directed to route
