@@ -14,17 +14,21 @@ php artisan breeze:install vue
 
 <hr>
 
-### Contents
+## Contents
 
 - [Creating Pages](#creating-pages)
 - [Different Routing](#different-routing)
 - [Form helper (post, put, delete) directed to route](#form-helper-post-put-delete-directed-to-route)
 - etc
 
-## Creating Pages
+### Creating Pages
 
 <img src="./assets/Creating-Pages.png">
 
-## Different Routing
+### Different Routing
 
-## Form helper (post, put, delete) directed to route
+<img src="./assets/Different-Routing-Through-Pages.png">
+
+### Form helper (post, put, delete) directed to route
+
+<img src="./assets/Creating-Pages.png">
