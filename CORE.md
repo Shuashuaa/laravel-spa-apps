@@ -31,4 +31,4 @@ php artisan breeze:install vue
 
 ### Form helper (post, put, delete) directed to route
 
-<img src="./assets/Creating-Pages.png">
+<img src="./assets/Form-Helper.png">
