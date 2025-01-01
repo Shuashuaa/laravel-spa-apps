@@ -17,6 +17,9 @@ import { Link } from '@inertiajs/vue3';
                     <Link class="text-dark" :href="route('aboutUs')">About Us</Link>
                 </li>
                 <li class="nav-item">
+                    <Link class="text-dark" :href="route('products.index')">Products</Link>
+                </li>
+                <li class="nav-item">
                     <Link class="text-dark" :href="route('contactUs')">Contact Us</Link>
                 </li>
                 <li class="nav-item">
