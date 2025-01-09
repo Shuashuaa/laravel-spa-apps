@@ -12,5 +12,6 @@
 ## Laravel-Vue-Inertia: No Breeze/No Starter Kit
 
 1. [Installation-Setup](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/INSTALLATION-SETUP.md)
-2. All of the Documentation for each functionality 
+2. [Form Helper](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FORM-HELPER.md)
+3. The rest of the Documentation for each functionality 
 is inside of [~Laravel-Vue-Inertia-No-Breeze-Starter-Kit](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/) Folder
