@@ -197,13 +197,56 @@ class AuthController extends Controller
 
 <br>
 
-# Use `route()` to post
-> we use `ziggy` for vue files to use laravel/php `route()` function/method.
+# Use `route()` helper function to post
+> we use `ziggy` for vue files to use laravel/php `route()` helper function.
 ### Register.vue
 ```
 const submit = () => {
     form.post(route('register'), {
         onError:() => form.reset('password', 'password_confirmation')
     });
+}
+```
+
+# Remember Me | remember_token
+### any.vue
+```
+import { useForm } from '@inertiajs/vue3'
+
+const form = useForm({
+    email: null,
+    password: null,
+    remember: null
+})
+
+<div class="flex items-center gap-2">
+    <label for="remember">Remember me</label>
+    <input type="checkbox" v-model="form.remember" id="remember"/>
+</div>
+```
+### add the remember request
+```
+$request->remember 
+```
+
+### AuthController.php
+```
+public function login(Request $request){
+        
+    $fields = $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ]);
+
+    if (Auth::attempt($fields, $request->remember)) {
+        $request->session()->regenerate();
+
+        return redirect()->intended('/');
+        // return Inertia::location('/');
+    }
+
+    return back()->withErrors([
+        'email' => 'The provided credentials do not match our records.',
+    ])->onlyInput('email');
 }
 ```
