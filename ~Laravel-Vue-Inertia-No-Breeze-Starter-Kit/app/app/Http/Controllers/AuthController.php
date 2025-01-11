@@ -20,6 +20,7 @@ class AuthController extends Controller
         // register
         $user = User::create($fields);
 
+        // login
         Auth::login($user);
 
         // redirect
@@ -34,7 +35,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($fields, $request->remember)) { 
-            $request->session()->regenerate();
+            $request->session()->regenerate(); //csrf token
 
             return redirect()->intended('/');
         }
@@ -42,5 +43,16 @@ class AuthController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
+    }
+
+    public function logout(Request $request){
+
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken(); //csrf token
+    
+        return redirect()->route('home');
     }
 }
