@@ -20,5 +20,8 @@
 7. [Logout Post Links](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/LOGOUT-POST-LINKS.md)
 8. [Dashboard Active Links](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/DASHBOARD-ACTIVE-LINKS.md)
 9. [Middleware](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/MIDDLEWARE.md)
-10. The rest of the Documentation for each functionality 
+10. [Middleware](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/MIDDLEWARE.md)
+11. [File Upload](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FILE-UPLOAD.md)
+12. [Seeding and Pagination](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/SEEDING-PAGINATION.md)
+13. The rest of the Documentation for each functionality 
 is inside of [~Laravel-Vue-Inertia-No-Breeze-Starter-Kit](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/) Folder
