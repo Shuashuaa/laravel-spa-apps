@@ -21,6 +21,7 @@
                     <Link :href="route('logout')" method="post" as="button" class="nav-link">Logout</Link>
                     <p class="nav-link">|</p>
                     <p class="rounded-md px-3 py-2 text-sm font-medium text-white">hello!, <span class="uppercase">{{ $page.props.auth.user.name }}</span></p>
+                    <img class="avatar" :src="$page.props.auth.user.avatar ? ('storage/' + $page.props.auth.user.avatar) : ('storage/avatars/default.')" width="100" alt="">
                 </div>
                 <div v-else class="space-x-6">
                     <Link :href="route('register')" class="nav-link" :class="{'bg-slate-700' : $page.component === 'Auth/Register'}">Register</Link>
