@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 
 use Illuminate\Http\Request;
@@ -12,10 +13,15 @@ class AuthController extends Controller
 
         // validate
         $fields = $request->validate([
+            'avatar' => 'file|nullable|max:300',
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed',
         ]);
+
+        if($request->hasFile('avatar')){
+            $fields['avatar'] = Storage::disk('public')->put('avatars', $request->avatar);
+        }
 
         // register
         $user = User::create($fields);
@@ -24,7 +30,7 @@ class AuthController extends Controller
         Auth::login($user);
 
         // redirect
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 
     public function login(Request $request){
@@ -37,7 +43,7 @@ class AuthController extends Controller
         if (Auth::attempt($fields, $request->remember)) { 
             $request->session()->regenerate(); //csrf token
 
-            return redirect()->intended('/');
+            return redirect()->intended('dashboard')->with('message', 'Welcome back to laravel inertia vuejs!');
         }
 
         return back()->withErrors([
