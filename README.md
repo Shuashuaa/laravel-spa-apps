@@ -1,6 +1,7 @@
 # Contents
 
 ## Laravel-Vue-Inertia: Breeze
+
 1. [Installation](./INSTALLATION.md)
 2. [Scaffolding](./1-laravel11-vue3js-inertia-breeze-scaffolding/)
 3. [CRUD](./CRUD.md) - [CRUD-APP](./2-L11V3IB-Crud/)
@@ -22,5 +23,6 @@
 9. [Middleware](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/MIDDLEWARE.md)
 10. [File Upload](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FILE-UPLOAD.md)
 11. [Seeding and Pagination](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/SEEDING-PAGINATION.md)
-12. The rest of the Documentation for each functionality 
+12. [Filters and Search](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FILTERS-SEARCH.md)
+13. The rest of the Documentation for each functionality 
 is inside of [~Laravel-Vue-Inertia-No-Breeze-Starter-Kit](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/) Folder
