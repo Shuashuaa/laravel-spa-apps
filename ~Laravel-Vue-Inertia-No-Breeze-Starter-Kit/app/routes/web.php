@@ -2,9 +2,21 @@
 
 use App\Http\Controllers\AuthController;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'Home', ["users" => User::paginate(5)])->name('home');
+Route::get('/', function(Request $request){
+    return inertia('Home', [
+        "users" => User::when($request->search, function($query) use ($request ){
+            $query
+            ->where('name', 'like', '%' . $request->search . '%')
+            // this
+            ->orWhere();
+        })->paginate(5)->withQueryString(),
+
+        "searchTerm" => $request->search
+    ]);
+})->name('home');
 
 Route::middleware('auth')->group(function(){
     
