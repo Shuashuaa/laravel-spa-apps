@@ -1,9 +1,21 @@
 <script setup>
+import { ref, watch } from 'vue';
+import { router } from '@inertiajs/vue3'
 import PaginationLinks from './Components/PaginationLinks.vue';
+import { debounce } from 'lodash';
 
-defineProps({
-    users: Object
+const props = defineProps({
+    users: Object,
+    searchTerm: String
 })
+
+const search = ref(props.searchTerm);
+
+watch(search, debounce(
+    (q) => router.get('/', { search: q }, { preserveState: true }),
+    500
+)
+)
 
 const getDate = (date) => 
     new Date(date).toLocaleDateString("en-us", {
@@ -18,6 +30,12 @@ const getDate = (date) =>
     <Head :title="`- ${$page.component }`"/>
     <h1>Home Page</h1>
     <div>
+
+        <div class="flex justify-end mb-4">
+            <div class="w-1/4">
+                <input type="search" placeholder="Search" v-model="search">
+            </div>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -26,6 +44,7 @@ const getDate = (date) =>
                     <th>name</th>
                     <th>email</th>
                     <th>registration date</th>
+                    <th>delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,10 +56,16 @@ const getDate = (date) =>
                     <td>{{ user.name }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ getDate(user.created_at) }}</td>
+                    <td>
+                        <button class="h-25 w-25 rounded-xl p-5 bg-red-500"></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <PaginationLinks :paginator="users"/>
+    <div>
+        <PaginationLinks :paginator="users"/>
+    </div>
+    
 </template> 
