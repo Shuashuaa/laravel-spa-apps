@@ -24,5 +24,6 @@
 10. [File Upload](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FILE-UPLOAD.md)
 11. [Seeding and Pagination](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/SEEDING-PAGINATION.md)
 12. [Filters and Search](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/FILTERS-SEARCH.md)
-13. The rest of the Documentation for each functionality 
+13. [Authorization and Policies](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/AUTHORIZATION-POLICIES.md)
+14. The rest of the Documentation for each functionality 
 is inside of [~Laravel-Vue-Inertia-No-Breeze-Starter-Kit](./~Laravel-Vue-Inertia-No-Breeze-Starter-Kit/) Folder
