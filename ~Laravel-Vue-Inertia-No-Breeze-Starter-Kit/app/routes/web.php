@@ -4,17 +4,23 @@ use App\Http\Controllers\AuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function(Request $request){
+    // return 'sample';
     return inertia('Home', [
-        "users" => User::when($request->search, function($query) use ($request ){
-            $query
-            ->where('name', 'like', '%' . $request->search . '%')
-            // this
-            ->orWhere();
+        'users' => User::when($request->search, function($query) use ($request ){
+            $query->where('name', 'like', '%' . $request->search . '%');
         })->paginate(5)->withQueryString(),
 
-        "searchTerm" => $request->search
+        'searchTerm' => $request->search,
+        
+        //convention from inertia docs | This checks the permission declared in the UserPolicy
+        'can' => [
+            'delete_user' => Auth::user() 
+                ? Auth::user()->can('delete', User::class) 
+                : null
+        ]
     ]);
 })->name('home');
 
