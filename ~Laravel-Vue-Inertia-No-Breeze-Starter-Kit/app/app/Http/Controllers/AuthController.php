@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function register(Request $request){
-
+        
         // validate
         $fields = $request->validate([
             'avatar' => 'file|nullable|max:300',
